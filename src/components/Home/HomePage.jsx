@@ -2,8 +2,11 @@
 export const HomePage = () => {
   return (
     <div>
-        <h1>Esta es la pantalla inicial</h1>
         
+        <h1>RummyCounterApp</h1>
+
+        <button>Iniciar</button>
+
     </div>
   )
 }
