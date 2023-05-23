@@ -1,7 +1,15 @@
+/* ---------- Palette Colors ---------- */
 :root {
-    --color-primario: #03a9f4;
-    --color-background: #81d4fa;
-    --color-hover: #0277bd;
+    --blue-900:  #124bb4;
+    --blue-800:  #146bd3;
+    --blue-700:  #147ce5;
+    --blue-600:  #148ff9;
+    --blue-500:  #109dff;
+    --blue-400:  #3cacff;
+    --blue-300:  #62bbff;
+    --blue-200:  #90cfff;
+    --blue-100:  #bce1ff;
+    --blue-50:   #e3f3ff;
 }
 
 

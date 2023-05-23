@@ -1,3 +1,41 @@
-.GamePage_container{
-    
+.GamePage {
+  background-color: var(--blue-200);
+  height: 100vh;
+}
+
+
+.GamePage_container-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.GamePage_container-h2{
+    font-size: 3vh;
+    text-align: center;
+    color: var(--blue-900);
+    font-weight: bold;
+}
+
+.GamePage_container-box-button{
+    padding: 10px 20px;
+    background-color: var(--blue-900);
+    color: #fff;
+    font-size: 2.5vh;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border: 2px solid var(--blue-900);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 2vh;
 }

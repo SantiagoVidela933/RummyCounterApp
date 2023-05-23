@@ -39,28 +39,42 @@ export const GamePage = () => {
       <div className="GamePage_container">
         
         <header>
-          <h2>Partida</h2>
+          <h2>Partida en juego...</h2>
         </header>
+        <main>
+          <h2 className='GamePage_container-h2'>{player1Name}: {player1Score}</h2>
+          <div className='GamePage_container-box'>
+            <input
+              type="number"
+              value={player1InputValue}
+              onChange={handlePlayer1InputChange}
+              
+            />
+            <button 
+              onClick={() => handleScoreChange(1)}
+              className='GamePage_container-box-button'
+            >
+              Sumar
+            </button>
+          </div>
+
+          <h2 className='GamePage_container-h2'>{player2Name}: {player2Score}</h2>
+          <div className='GamePage_container-box'> 
+            <input
+              type="number"
+              value={player2InputValue}
+              onChange={handlePlayer2InputChange}
+              
+            />
+            <button 
+              onClick={() => handleScoreChange(2)}
+              className='GamePage_container-box-button'
+            >
+              Sumar
+            </button>
+          </div>
+        </main>
         
-        <h2>{player1Name}: {player1Score}</h2>
-        <div>
-          <input
-            type="number"
-            value={player1InputValue}
-            onChange={handlePlayer1InputChange}
-          />
-          <button onClick={() => handleScoreChange(1)}>Sumar</button>
-        </div>
-        
-        <h2>{player2Name}: {player2Score}</h2>
-        <div>
-          <input
-            type="number"
-            value={player2InputValue}
-            onChange={handlePlayer2InputChange}
-          />
-          <button onClick={() => handleScoreChange(2)}>Sumar</button>
-        </div>
 
       </div>
     </div>

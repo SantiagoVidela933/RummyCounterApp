@@ -2,13 +2,13 @@
 
 /* Estilos generales */
 .PlayersPage {
-  background-color: var(--color-background);
+  background-color: var(--blue-200);
   height: 100vh;
 }
 
 /* Estilos para el encabezado */
 header {
-  background-color: var(--color-primario);
+  background-color: var(--blue-900);
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -20,7 +20,7 @@ header .PlayersPage_container-h2 {
 
 /* Estilos para el contenido principal */
 main {
-  padding: 40px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,55 +32,52 @@ form {
 }
 
 label {
-  margin-bottom: 10px;
+  margin: 20px;
+  font-size: 4vh;
+  text-align: center;
+  color: var(--blue-900);
+  font-weight: bold;
 }
 
 input[type="text"] {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid var(--blue-900);
   border-radius: 4px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  font-size: 2vh;
 }
 
-button[type="submit"] {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 .Players_container-box{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .Players_container-box-button{
-    padding: 10px 20px;
-    background-color: var(--color-primario);
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background-color: var(--blue-900);
+  color: #fff;
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .Players_container-box-button:hover{
-    background-color: var(--color-hover);
+    background-color: var(--blue-700);
 }
 .Players_container-box-button:focus{
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-background);
+    box-shadow: 0 0 0 2px var(--blue-700);
 }
 
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 480px) {
   header {
-    font-size: 24px;
+    font-size: 2vh;
   }
 
   input[type="text"],

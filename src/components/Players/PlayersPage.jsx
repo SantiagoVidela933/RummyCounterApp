@@ -23,14 +23,14 @@ export const PlayersPage = () => {
         </header>
         <main>
           <form>
-            <label htmlFor="player1">Jugador 1: </label>
+            <label htmlFor="player1">JUGADOR 1 </label>
             <input
               type="text"
               value={player1Name}
               onChange={(e) => setPlayer1Name(e.target.value)} // Actualiza el nombre del jugador 1
             />
 
-            <label htmlFor="player2">Jugador 2: </label>
+            <label htmlFor="player2">JUGADOR 2 </label>
             <input
               type="text"
               value={player2Name}
