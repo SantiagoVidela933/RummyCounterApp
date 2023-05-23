@@ -1,0 +1,18 @@
+.main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #555050;
+}
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container-h1{
+    font-size: 6vh;
+    padding-bottom: 30px;
+}
