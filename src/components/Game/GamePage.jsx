@@ -1,25 +1,67 @@
-import { useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import { PlayersContext } from '../../PlayersContext';
+import { useState } from "react";
 
 import './GamePage.css';
 
 export const GamePage = () => {
 
-  const navigate = useNavigate();
+  const { player1Name, player2Name } = useContext(PlayersContext);
 
-  const onHandleButtonClick = () => {
-    navigate('/scorepage')
-  }
+  // Estados para almacenar los puntajes de ambos jugadores
+  const [player1Score, setPlayer1Score] = useState(0);
+  const [player2Score, setPlayer2Score] = useState(0);
+
+  // Estado para almacenar el valor del campo de entrada de ambos jugadores
+  const [player1InputValue, setPlayer1InputValue] = useState('');
+  const [player2InputValue, setPlayer2InputValue] = useState('');
+
+  // Función para manejar el cambio de puntaje
+  const handleScoreChange = (player) => {
+    if (player === 1) {
+      // Sumar el puntaje ingresado al puntaje actual del jugador 1
+      setPlayer1Score(player1Score + parseInt(player1InputValue));
+      setPlayer1InputValue('');
+    } else if (player === 2) {
+      // Sumar el puntaje ingresado al puntaje actual del jugador 2
+      setPlayer2Score(player2Score + parseInt(player2InputValue));
+      setPlayer2InputValue('');
+    }
+  };
+
+  // Función para manejar el cambio del campo de entrada del jugador 1 y 2
+  const handlePlayer1InputChange = ({target}) => setPlayer1InputValue(target.value);
+  const handlePlayer2InputChange = ({target}) => setPlayer2InputValue(target.value);
+
 
   return (
-    <div className="main">
-      <div className="main_container">
-        <h1 className="main_container-h1">Esta es la tercera pantalla</h1>
-        <button
-          className="main_container-button"
-          onClick={onHandleButtonClick}
-        >
-          Siguiente
-        </button>
+    <div className="GamePage">
+      <div className="GamePage_container">
+        
+        <header>
+          <h2>Partida</h2>
+        </header>
+        
+        <h2>{player1Name}: {player1Score}</h2>
+        <div>
+          <input
+            type="number"
+            value={player1InputValue}
+            onChange={handlePlayer1InputChange}
+          />
+          <button onClick={() => handleScoreChange(1)}>Sumar</button>
+        </div>
+        
+        <h2>{player2Name}: {player2Score}</h2>
+        <div>
+          <input
+            type="number"
+            value={player2InputValue}
+            onChange={handlePlayer2InputChange}
+          />
+          <button onClick={() => handleScoreChange(2)}>Sumar</button>
+        </div>
+
       </div>
     </div>
   )

@@ -10,11 +10,11 @@ export const HomePage = () => {
   }
 
   return (
-    <div className="main">
-        <div className="main_container">
-          <h1 className="main_container-h1">RummyCounterApp</h1>
+    <div className="HomePage">
+        <div className="HomePage_container">
+          <h1 className="HomePage_container-h1">RummyCounterApp</h1>
           <button 
-            className="main_container-button"
+            className="HomePage_container-button"
             onClick={onHandleButtonClick}
           >
             Iniciar

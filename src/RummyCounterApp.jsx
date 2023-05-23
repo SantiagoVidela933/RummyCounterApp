@@ -12,8 +12,8 @@ export const RummyCounterApp = () => {
     <Router>  
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/playerspage" element={<PlayersPage/>} />
-        <Route path="/gamepage" element={<GamePage/>} />
+        <Route path="/playerspage" element={<PlayersPage />} />
+        <Route path="/gamepage" element={<GamePage />} />
         <Route path="/scorepage" element={<ScorePage/>} />
       </Routes>
     </Router>

@@ -1,6 +1,17 @@
+:root {
+    --color-primario: #03a9f4;
+    --color-background: #81d4fa;
+    --color-hover: #0277bd;
+}
+
+
+/* ---------- Styles ---------- */
+
 body, html{
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
+
