@@ -6,12 +6,13 @@ import './PlayersPage.css';
 
 export const PlayersPage = () => {
 
-  const navigate = useNavigate();
+  // Hook para la navegación
+  const navigate = useNavigate(); 
 
-  const onHandleButtonClick = () => {
-    navigate('/gamepage');
-  }
+  // Navega a la ruta '/gamepage' al hacer clic en el botón
+  const onHandleButtonClick = () => navigate('/gamepage');
   
+  // Obtén los valores del contexto
   const { player1Name, setPlayer1Name, player2Name, setPlayer2Name } = useContext(PlayersContext);
 
   return (
@@ -26,14 +27,14 @@ export const PlayersPage = () => {
             <input
               type="text"
               value={player1Name}
-              onChange={(e) => setPlayer1Name(e.target.value)}
+              onChange={(e) => setPlayer1Name(e.target.value)} // Actualiza el nombre del jugador 1
             />
 
             <label htmlFor="player2">Jugador 2: </label>
             <input
               type="text"
               value={player2Name}
-              onChange={(e) => setPlayer2Name(e.target.value)}
+              onChange={(e) => setPlayer2Name(e.target.value)} // Actualiza el nombre del jugador 2
             />
           
           </form>
