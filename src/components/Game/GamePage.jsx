@@ -1,10 +1,17 @@
-import { useContext } from 'react';
 import { PlayersContext } from '../../PlayersContext';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
 import { useState } from "react";
 
 import './GamePage.css';
 
 export const GamePage = () => {
+
+  const navigate = useNavigate();
+
+  const onHandleButtonClick = () => {
+    navigate('/scorepage')
+  }
 
   const { player1Name, player2Name } = useContext(PlayersContext);
 
@@ -73,6 +80,12 @@ export const GamePage = () => {
               Sumar
             </button>
           </div>
+          <button 
+            onClick={onHandleButtonClick}
+            className='GamePage_container-box-button_end'
+          >
+            Finalizar
+          </button>
         </main>
         
 
