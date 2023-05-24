@@ -13,11 +13,14 @@ export const GamePage = () => {
     navigate('/scorepage')
   }
 
-  const { player1Name, player2Name } = useContext(PlayersContext);
-
-  // Estados para almacenar los puntajes de ambos jugadores
-  const [player1Score, setPlayer1Score] = useState(0);
-  const [player2Score, setPlayer2Score] = useState(0);
+  const {
+    player1Name,
+    player1Score,
+    player2Name,
+    player2Score,
+    setPlayer1Score,
+    setPlayer2Score,
+  } = useContext(PlayersContext);
 
   // Estado para almacenar el valor del campo de entrada de ambos jugadores
   const [player1InputValue, setPlayer1InputValue] = useState('');

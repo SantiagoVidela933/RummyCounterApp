@@ -1,25 +1,31 @@
-import { useNavigate } from "react-router-dom";
+import { PlayersContext } from '../../PlayersContext';
+import { useContext } from "react";
+
 
 import './ScorePage.css';
 
 export const ScorePage = () => {
 
-  const navigate = useNavigate();
-
-  const onHandleButtonClick = () => {
-    navigate('/')
+  // Obtén los nombres y puntajes de los jugadores desde el contexto
+  const { player1Name, player1Score, player2Name, player2Score } = useContext(PlayersContext); 
+  
+  // Determina el jugador con el puntaje más alto
+  let winner = '';
+  if (player1Score > player2Score) {
+    winner = player1Name;
+  } else if (player2Score > player1Score) {
+    winner = player2Name;
+  } else {
+    winner = 'Empate';
   }
 
   return (
-    <div className="main">
-      <div className="main_container">
-        <h1>Esta es la cuarta pantalla</h1>
-        <button 
-          className="main_container-button"
-          onClick={onHandleButtonClick}
-        >
-          Reiniciar
-        </button>
+    <div className="ScorePage">
+      <div className="ScorePage_popup">
+        <h2>¡Partida Finalizada!</h2>
+        <p>Jugador 1: {player1Name} - Puntaje: {player1Score}</p>
+        <p>Jugador 2: {player2Name} - Puntaje: {player2Score}</p>
+        <p>¡El ganador es: {winner}!</p>
       </div>
     </div>
   )
