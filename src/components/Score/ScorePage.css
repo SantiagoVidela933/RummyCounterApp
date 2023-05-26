@@ -1,18 +1,40 @@
-.main{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    background-color: #555050;
+
+.ScorePage{
+    background-color: var(--blue-200);
 }
 
-.main_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.ScorePage_popup{
+    background-color: var(--blue-500);
 }
 
-.main_container-h1{
-    font-size: 6vh;
-    padding-bottom: 30px;
-}
+@media (max-width: 768px) {
+    .ScorePage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+    .ScorePage_popup {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .ScorePage_popup h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .ScorePage_popup p {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  
+    .ScorePage_popup p:last-child {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
