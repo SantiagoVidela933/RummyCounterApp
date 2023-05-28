@@ -1,10 +1,22 @@
 
 .ScorePage{
-    background-color: var(--blue-200);
+  display: flex;
+  background-color: var(--blue-200);
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ScorePage_title{
+  transform: translateY(-20vh);
+}
+.ScorePage_title-h1{
+  font-size: 4vh;
+  padding-bottom: 30px;
+  color: var(--blue-900);
 }
 
 .ScorePage_popup{
-    background-color: var(--blue-500);
+  background-color: var(--blue-500);
 }
 
 @media (max-width: 768px) {
@@ -38,3 +50,17 @@
       font-weight: bold;
     }
   }
+
+.ScorePage_restart-button{
+  padding: 10px 20px;
+  margin-top: 10vw;
+  background-color: var(--blue-900);
+  color: #fff;
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
