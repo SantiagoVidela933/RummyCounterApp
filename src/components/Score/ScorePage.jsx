@@ -35,10 +35,14 @@ export const ScorePage = () => {
         <h1 className="ScorePage_title-h1">RummyCounterApp</h1>
       </div>
       <div className="ScorePage_popup">
-        <h2>¡Partida Finalizada!</h2>
-        <p>Jugador 1: {player1Name} - Puntaje: {player1Score}</p>
-        <p>Jugador 2: {player2Name} - Puntaje: {player2Score}</p>
-        <p>El/La ganador es: {winner}!</p>
+        <div className="ScorePage_popUp_title">
+          <h2 className='ScorePage_popUp_title-h2' >¡Partida Finalizada!</h2>
+        </div>
+        <p><b>{player1Name} - Puntaje: {player1Score}</b></p>
+        <p><b>{player2Name} - Puntaje: {player2Score}</b></p>
+        <div className='ScorePage_popUp_title'>
+          <h2 className='ScorePage_popUp_title-h2' >El/La ganador es: <span>{winner}</span></h2>
+        </div>
       </div>
       <button className="ScorePage_restart-button" onClick={handleRestart}>
         Reiniciar Juego
